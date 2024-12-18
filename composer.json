@@ -2,7 +2,7 @@
     "name": "fahadyousafmahar/slash-login",
     "description": "Say goodbye to repetitively fill / submit login forms during development of your laravel applications. This package allows you to login as any user with just a \"slash login\" (/login/user_id)",
     "type": "library",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": ["dev", "testing", "laravel developer login", "laravel impersonate", "laravel login as a user"],
     "license": "MIT",
     "autoload": {

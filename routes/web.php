@@ -20,7 +20,7 @@ if (config('app.env') != 'production') {
         foreach (config('slash-login.custom_session_data') as $key => $value) {
             session()->push($key,$value);
         }
-        if (!Route::has(config('slash-login.route'))){
+        if (!Route::has(config('slash-login.redirect_route'))){
             /*
              * You should configure the redirect_route in the config/slash-login.php file.
              * The redirect_route should be a valid route name.
