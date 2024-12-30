@@ -2,9 +2,8 @@
 
 namespace FahadYousafMahar\SlashLogin;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+
 class SlashLoginServiceProvider extends ServiceProvider
 {
     /**
@@ -17,23 +16,22 @@ class SlashLoginServiceProvider extends ServiceProvider
         //
     }
 
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
+    public function boot(): void
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/slash-login.php' => config_path('slash-login.php'),
-            ], 'slash-login');
+                __DIR__ . '/../config/slash-login.php' => config_path('slash-login.php'),
+            ], 'slash-login-config');
         }
 
         $this->configure();
-        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
-        return $this;
-     }
+        $this->loadRoutes();
+    }
+
+    public function loadRoutes()
+    {
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
+    }
 
     /**
      * Configure the package.
@@ -42,7 +40,8 @@ class SlashLoginServiceProvider extends ServiceProvider
      */
     protected function configure()
     {
-        if (!config('slash-login.route', null))
-            $this->mergeConfigFrom(__DIR__.'/../config/slash-login.php', 'slash-login');
+        if (!config('slash-login.route')) {
+            $this->mergeConfigFrom(__DIR__ . '/../config/slash-login.php', 'slash-login');
+        }
     }
 }
