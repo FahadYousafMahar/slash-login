@@ -11,7 +11,7 @@ if (config('slash-login.can_access')) {
                 /*
                  Correct the model name in config/slash-login.php
                  You can publish the config file if it doesn't exist, by running the command given below:
-                 php artisan vendor:publish --tag="slash-login"
+                 php artisan vendor:publish --tag="slash-login-config"
                  */
                 throw new Exception('The configured model class (' . config('slash-login.model') . ') doesn\'t exist.');
             }

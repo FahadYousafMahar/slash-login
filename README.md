@@ -1,6 +1,14 @@
 ## SlashLogin: Streamline Your Laravel Development
 
 ### Tired of repetitive logins during development? Let us **Slash** your **Login**!
+
+![GitHub contributors](https://img.shields.io/github/contributors/fahadyousafmahar/slash-login)
+![Packagist Downloads](https://img.shields.io/packagist/dt/fahadyousafmahar/slash-login)
+
+![GitHub top language](https://img.shields.io/github/languages/top/fahadyousafmahar/slash-login)
+![GitHub License](https://img.shields.io/github/license/fahadyousafmahar/slash-login)
+![GitHub repo size](https://img.shields.io/github/repo-size/fahadyousafmahar/slash-login)
+
 #### Simplify your development workflow today with SlashLogin!
 
 SlashLogin is a Laravel package designed to simplify your development / testing workflow. It allows you to quickly log in as any user in your application by accessing a configured route. It's perfect for developers who want to save time and effort by eliminating repetitive logins during development.
@@ -37,7 +45,7 @@ If you configure the route as `login` then you can log in as user with ID `123` 
 
 2. **Publish the configuration:**
    ```bash
-   php artisan vendor:publish --tag="slash-login"
+   php artisan vendor:publish --tag="slash-login-config"
    ```
 
 3. **Configure as needed:**
@@ -55,3 +63,7 @@ If you configure the route as `login` then you can log in as user with ID `123` 
 **Keywords:** Laravel, development, testing, login, authentication, efficiency, productivity, developer tool.
 
 **Author:** [Fahad Yousaf Mahar](https://fahadyousafmahar.com)
+
+**Contributors:**
+
+[Austin White](http://austinw.me)
